@@ -1,0 +1,152 @@
+:root {
+    --color-primario: #2552eb;
+    --color-oscuro: #102452;
+    --color-claro: #f2f5fb;
+    --color-blanco: #ffffff;
+    --fuente: Arial, sans-serif;
+    --espacio: 1rem;
+    --espacio-grande: 3rem;
+    --radio: 0.5rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-blanco);
+    color: var(--color-oscuro);
+    font-family: var(--fuente);
+    line-height: 1.6;
+}
+
+h1, h2, h3, p {
+    margin: 0 0 var(--espacio);
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+header, footer {
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+}
+
+.barra {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio);
+    padding: var(--espacio) 0;
+}
+
+.marca {
+    color: var(--color-blanco);
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio);
+}
+
+nav a {
+    color: var(--color-blanco);
+    padding: 0.5rem 0;
+}
+
+section {
+    padding: var(--espacio-grande) 0;
+}
+
+.hero, .proceso, .tarjeta {
+    background-color: var(--color-claro);
+}
+
+.hero, .contacto, footer {
+    text-align: center;
+}
+
+.hero p {
+    max-width: 40rem;
+    margin: 0 auto var(--espacio);
+}
+
+.boton {
+    display: inline-block;
+    padding: var(--espacio);
+    border-radius: var(--radio);
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: var(--color-oscuro);
+}
+
+.servicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espacio);
+}
+
+.tarjeta {
+    padding: var(--espacio);
+    border-radius: var(--radio);
+}
+
+.tarjeta p, footer p {
+    margin-bottom: 0;
+}
+
+ol {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: var(--espacio);
+}
+
+footer {
+    padding: var(--espacio);
+}
+
+@media (min-width: 768px) {
+    .barra {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .servicios {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+}
